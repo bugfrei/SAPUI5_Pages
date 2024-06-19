@@ -13,12 +13,12 @@ sap.ui.define([
             onBtn2Press: function() {
                 let nc = this.getView().byId("app");
                 let p1 = this.getView().byId("page1");
-                nc.to(p1, "fade");
+                nc.to(p1, "flip");
             },
             onBtn1Press: function() {
                 let nc = this.getView().byId("app");
                 let p2 = this.getView().byId("page2");
-                nc.to(p2, "fade");
+                nc.to(p2, "flip");
             }
         });
     });
