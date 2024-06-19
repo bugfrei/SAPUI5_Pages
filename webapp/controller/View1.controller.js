@@ -9,16 +9,41 @@ sap.ui.define([
 
         return Controller.extend("project1.controller.View1", {
             onInit: function () {
+                jQuery.sap.require('sap.m.NavContainer');
+                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-core');
+                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-effect')
+                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-core');
+                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-clip');
+                
+                        sap.m.NavContainer.transitions["custom"] = {
+            
+                    to: function(oFromPage, oToPage, fCallback) {
+                        window.setTimeout(function(){
+                            oFromPage.$().toggle("clip");
+                            oToPage.$().toggle("clip");
+                            fCallback();
+                        },600);
+                        
+                    },
+            
+                    back: function(oFromPage, oToPage, fCallback) {
+                        window.setTimeout(function(){
+                            oFromPage.$().toggle("clip");
+                            oToPage.$().toggle("clip");
+                            fCallback();
+                        },600);
+                    }
+            };/* code for transition */
             },
             onBtn2Press: function() {
                 let nc = this.getView().byId("app");
                 let p1 = this.getView().byId("page1");
-                nc.to(p1, "show");
+                nc.to(p1, "custom");
             },
             onBtn1Press: function() {
                 let nc = this.getView().byId("app");
                 let p2 = this.getView().byId("page2");
-                nc.to(p2, "show");
+                nc.to(p2, "custom");
             }
         });
     });
