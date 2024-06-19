@@ -13,14 +13,14 @@ sap.ui.define([
                 jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-core');
                 jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-effect')
                 jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-core');
-                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-pulsate');
+                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-scale');
                 
                         sap.m.NavContainer.transitions["custom"] = {
             
                     to: function(oFromPage, oToPage, fCallback) {
                         window.setTimeout(function(){
-                            oFromPage.$().toggle("pulsate");
-                            oToPage.$().toggle("pulsate");
+                            oFromPage.$().toggle("scale");
+                            oToPage.$().toggle("scale");
                             fCallback();
                         },600);
                         
@@ -28,8 +28,8 @@ sap.ui.define([
             
                     back: function(oFromPage, oToPage, fCallback) {
                         window.setTimeout(function(){
-                            oFromPage.$().toggle("pulsate");
-                            oToPage.$().toggle("pulsate");
+                            oFromPage.$().toggle("scale");
+                            oToPage.$().toggle("scale");
                             fCallback();
                         },600);
                     }
