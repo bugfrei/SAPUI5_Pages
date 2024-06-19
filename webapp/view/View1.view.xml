@@ -1,0 +1,24 @@
+<mvc:View controllerName="project1.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="false"
+    xmlns="sap.m">
+    <App id="app" initialPage="page1">
+        <pages>
+            <Page id="page1" title="Seite 1">
+                <content>
+                    <VBox>
+                        <Text id="t1" text="Inhalt der Seite 1 (Page(id=page1)/content)" />
+                        <Button text="zu Seite 2" press="onHide1" />
+                    </VBox>
+                </content>
+            </Page>
+            <Page id="page2" title="Seite 2">
+                <content>
+                    <VBox>
+                        <Text id="t2" text="Inhalt der Seite 2 (Page(id=page2)/content)" />
+                        <Button text="zu Seite 1" press="onHide2" />
+                    </VBox>
+                </content>
+            </Page>
+        </pages>
+    </App>
+</mvc:View>
