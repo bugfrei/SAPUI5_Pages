@@ -13,14 +13,14 @@ sap.ui.define([
                 jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-core');
                 jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-ui-effect')
                 jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-core');
-                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-fade');
+                jQuery.sap.require('sap.ui.thirdparty.jqueryui.jquery-effects-fold');
                 
                         sap.m.NavContainer.transitions["custom"] = {
             
                     to: function(oFromPage, oToPage, fCallback) {
                         window.setTimeout(function(){
-                            oFromPage.$().toggle("fade");
-                            oToPage.$().toggle("fade");
+                            oFromPage.$().toggle("fold");
+                            oToPage.$().toggle("fold");
                             fCallback();
                         },600);
                         
@@ -28,8 +28,8 @@ sap.ui.define([
             
                     back: function(oFromPage, oToPage, fCallback) {
                         window.setTimeout(function(){
-                            oFromPage.$().toggle("fade");
-                            oToPage.$().toggle("fade");
+                            oFromPage.$().toggle("fold");
+                            oToPage.$().toggle("fold");
                             fCallback();
                         },600);
                     }
