@@ -7,7 +7,7 @@
                 <content>
                     <VBox>
                         <Text id="t1" text="Inhalt der Seite 1 (Page(id=page1)/content)" />
-                        <Button text="zu Seite 2" press="onHide1" />
+                        <Button text="zu Seite 2" press="onBtn1Press" />
                     </VBox>
                 </content>
             </Page>
@@ -15,7 +15,7 @@
                 <content>
                     <VBox>
                         <Text id="t2" text="Inhalt der Seite 2 (Page(id=page2)/content)" />
-                        <Button text="zu Seite 1" press="onHide2" />
+                        <Button text="zu Seite 1" press="onBtn2Press" />
                     </VBox>
                 </content>
             </Page>
